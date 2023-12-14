@@ -6,49 +6,49 @@
   font-display: swap;
   font-family: Source3;
   font-weight: 400;
-  src: url("/pixonic/public/fonts/SourceSans3-Regular.woff2") format("woff2"), url("/pixonic/public/fonts/SourceSans3-Regular.woff") format("woff"), url("/pixonic/public/fonts/SourceSans3-Regular.eot") format("eot"), url("/pixonic/public/fonts/SourceSans3-Regular.ttf") format("ttf");
+  src: url("/pix/public/fonts/SourceSans3-Regular.woff2") format("woff2"), url("/pix/public/fonts/SourceSans3-Regular.woff") format("woff"), url("/pix/public/fonts/SourceSans3-Regular.eot") format("eot"), url("/pix/public/fonts/SourceSans3-Regular.ttf") format("ttf");
 }
 @font-face {
   font-display: swap;
   font-family: Source3;
   font-weight: 700;
-  src: url("/pixonic/public/fonts/SourceSans3-Bold.woff2") format("woff2"), url("/pixonic/public/fonts/SourceSans3-Bold.woff") format("woff"), url("/pixonic/public/fonts/SourceSans3-Bold.eot") format("eot"), url("/pixonic/public/fonts/SourceSans3-Bold.ttf") format("ttf");
+  src: url("/pix/public/fonts/SourceSans3-Bold.woff2") format("woff2"), url("/pix/public/fonts/SourceSans3-Bold.woff") format("woff"), url("/pix/public/fonts/SourceSans3-Bold.eot") format("eot"), url("/pix/public/fonts/SourceSans3-Bold.ttf") format("ttf");
 }
 @font-face {
   font-display: swap;
   font-family: SourceCode;
   font-weight: 500;
-  src: url("/pixonic/public/fonts/SourceCodePro-Medium.woff2") format("woff2"), url("/pixonic/public/fonts/SourceCodePro-Medium.woff") format("woff"), url("/pixonic/public/fonts/SourceCodePro-Medium.eot") format("eot"), url("/pixonic/public/fonts/SourceCodePro-Medium.ttf") format("ttf");
+  src: url("/pix/public/fonts/SourceCodePro-Medium.woff2") format("woff2"), url("/pix/public/fonts/SourceCodePro-Medium.woff") format("woff"), url("/pix/public/fonts/SourceCodePro-Medium.eot") format("eot"), url("/pix/public/fonts/SourceCodePro-Medium.ttf") format("ttf");
 }
 @font-face {
   font-display: swap;
   font-family: SourceCode;
   font-weight: 700;
-  src: url("/pixonic/public/fonts/SourceCodePro-Bold.woff2") format("woff2"), url("/pixonic/public/fonts/SourceCodePro-Bold.woff") format("woff"), url("/pixonic/public/fonts/SourceCodePro-Bold.eot") format("eot"), url("/pixonic/public/fonts/SourceCodePro-Bold.ttf") format("ttf");
+  src: url("/pix/public/fonts/SourceCodePro-Bold.woff2") format("woff2"), url("/pix/public/fonts/SourceCodePro-Bold.woff") format("woff"), url("/pix/public/fonts/SourceCodePro-Bold.eot") format("eot"), url("/pix/public/fonts/SourceCodePro-Bold.ttf") format("ttf");
 }
 @font-face {
   font-display: swap;
   font-family: SourceCode;
   font-weight: 900;
-  src: url("/pixonic/public/fonts/SourceCodePro-Black.woff2") format("woff2"), url("/pixonic/public/fonts/SourceCodePro-Black.woff") format("woff"), url("/pixonic/public/fonts/SourceCodePro-Black.eot") format("eot"), url("/pixonic/public/fonts/SourceCodePro-Black.ttf") format("ttf");
+  src: url("/pix/public/fonts/SourceCodePro-Black.woff2") format("woff2"), url("/pix/public/fonts/SourceCodePro-Black.woff") format("woff"), url("/pix/public/fonts/SourceCodePro-Black.eot") format("eot"), url("/pix/public/fonts/SourceCodePro-Black.ttf") format("ttf");
 }
 @font-face {
   font-display: swap;
   font-family: Source;
   font-weight: 400;
-  src: url("/pixonic/public/fonts/SourceSansPro-Regular.woff2") format("woff2"), url("/pixonic/public/fonts/SourceSansPro-Regular.woff") format("woff"), url("/pixonic/public/fonts/SourceSansPro-Regular.eot") format("eot"), url("/pixonic/public/fonts/SourceSansPro-Regular.ttf") format("ttf");
+  src: url("/pix/public/fonts/SourceSansPro-Regular.woff2") format("woff2"), url("/pix/public/fonts/SourceSansPro-Regular.woff") format("woff"), url("/pix/public/fonts/SourceSansPro-Regular.eot") format("eot"), url("/pix/public/fonts/SourceSansPro-Regular.ttf") format("ttf");
 }
 @font-face {
   font-display: swap;
   font-family: Source;
   font-weight: 600;
-  src: url("/pixonic/public/fonts/SourceSansPro-SemiBold.woff2") format("woff2"), url("/pixonic/public/fonts/SourceSansPro-SemiBold.woff") format("woff"), url("/pixonic/public/fonts/SourceSansPro-SemiBold.eot") format("eot"), url("/pixonic/public/fonts/SourceSansPro-SemiBold.ttf") format("ttf");
+  src: url("/pix/public/fonts/SourceSansPro-SemiBold.woff2") format("woff2"), url("/pix/public/fonts/SourceSansPro-SemiBold.woff") format("woff"), url("/pix/public/fonts/SourceSansPro-SemiBold.eot") format("eot"), url("/pix/public/fonts/SourceSansPro-SemiBold.ttf") format("ttf");
 }
 @font-face {
   font-display: swap;
   font-family: SourcePro;
   font-weight: 700;
-  src: url("/pixonic/public/fonts/SourceSansPro-Bold.woff2") format("woff2"), url("/pixonic/public/fonts/SourceSansPro-Bold.woff") format("woff"), url("/pixonic/public/fonts/SourceSansPro-Bold.eot") format("eot"), url("/pixonic/public/fonts/SourceSansPro-Bold.ttf") format("ttf");
+  src: url("/pix/public/fonts/SourceSansPro-Bold.woff2") format("woff2"), url("/pix/public/fonts/SourceSansPro-Bold.woff") format("woff"), url("/pix/public/fonts/SourceSansPro-Bold.eot") format("eot"), url("/pix/public/fonts/SourceSansPro-Bold.ttf") format("ttf");
 }
 /*
     b = breakpoint
