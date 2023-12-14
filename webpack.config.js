@@ -43,6 +43,20 @@ module.exports = {
                 ],
 
             },
+            {
+                test: /\.(svg|jpe?g|png|webp|ico)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: path.join('img', '[name][ext]')
+                }
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: path.join('fonts', '[name][ext]')
+                }
+            },
         ],
     },
     plugins: [
