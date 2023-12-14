@@ -1,0 +1,117 @@
+.game-slider {
+    overflow: hidden;
+    z-index: 1;
+
+    @include from($b-md) {
+        overflow: initial;
+    }
+
+    .swiper-wrapper {
+        @include from($b-md) {
+            align-items: center;
+        }
+    }
+
+    &__btn {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: calc((min(100vw, 450px) - 42px) * 2 / 7);
+        z-index: 2;
+        cursor: pointer;
+
+        @include from($b-md) {
+            width: 60px;
+            height: 60px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__btn-img {
+        width: 40px;
+        aspect-ratio: 5 / 3;
+
+        @include from($b-md) {
+            width: 45px;
+        }
+
+        @include from($b-desktop) {
+            width: 55px;
+        }
+
+        @include from($b-lg) {
+            width: 60px;
+        }
+    }
+
+    &__btn_prev {
+        left: 0;
+        transform: translate(-50%, -50%) rotate(90deg);
+
+        @include from($b-md) {
+            left: -35px;
+        }
+
+        @include from($b-xl) {
+            left: -60px;
+        }
+    }
+
+    &__btn_next {
+        right: 0;
+        transform: translate(50%, -50%) rotate(-90deg);
+
+        @include from($b-md) {
+            right: -35px;
+        }
+
+        @include from($b-xl) {
+            right: -60px;
+        }
+    }
+
+    &__btn_disabled {
+        display: none;
+    }
+
+    &__pagination-wrap {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        margin-top: 25px;
+
+        @include from($b-md) {
+            display: flex;
+        }
+
+        @include from($b-xl) {
+            margin-top: 40px;
+        }
+    }
+    
+    &__pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    &__pagination-item {
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        background-color: rgba(#FFFFFF, 0.5);
+        transition: width $ui-transition-time-2, height $ui-transition-time-2, background-color $ui-transition-time-2;
+        cursor: pointer;
+    }
+
+    &__pagination-item_active {
+        width: 14px;
+        height: 14px;
+        background-color: $ui-c-brand;
+    }
+}

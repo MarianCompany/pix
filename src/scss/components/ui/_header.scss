@@ -1,0 +1,307 @@
+.header {
+    position: relative;
+    z-index: 2;
+
+    &_abs {
+        width: 100%;
+        position: absolute;
+    }
+
+    &_with-bg {
+        height: 185px;
+
+        @include from($b-md) {
+            height: 200px;
+        }
+
+        @include from($b-desktop) {
+            height: 240px;
+        }
+
+        @include from($b-lg) {
+            height: 300px;
+        }
+
+        @include from($b-xl) {
+            height: 360px;
+        }
+    }
+
+    &_dark {
+        .header__burger-line {
+            background: #000000;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 40px 0 30px 0;
+    }
+
+    &__block {
+        display: flex;
+    }
+
+    &__separate-line {
+        width: clamp(245px, p(300, 390), 750px);
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.2);
+
+        @include from($b-md) {
+            display: none;
+        }
+    }
+
+    &__nav {
+        width: 100%;
+        min-height: 100vh;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translateY(-200%);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 90px;
+        background: rgba(0, 0, 0, 0.60);
+        backdrop-filter: blur(7px);
+        transition: transform $ui-transition-time-3;
+
+        @include from($b-md) {
+            width: auto;
+            min-height: 0;
+            position: fixed;
+            top: 30px;
+            left: auto;
+            transform: none;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            gap: 25px;
+            padding: 15px 30px;
+
+            right: calc((100vw - 875px) / 2);
+        }
+
+        @include from($b-desktop) {
+            gap: 35px;
+            padding: 20px 40px;
+            right: calc((100vw - 1040px) / 2);
+        }
+
+        @include from($b-lg) {
+            right: calc((100vw - 1240px) / 2);
+        }
+
+        @include from($b-xl) {
+            gap: 45px;
+            padding: 25px 50px;
+            right: calc((100vw - 1400px) / 2);
+        }
+
+        @include from($b-2xl) {
+            right: calc((100vw - 1520px) / 2);
+        }
+    }
+
+    &__nav_active {
+        @include to(calc($b-md - 0.1)) {
+            transform: translateY(0);
+        }
+    }
+
+    &__nav-el {
+        display: flex;
+        margin-top: 40px;
+
+        @include from($b-md) {
+            margin-top: 0;
+        }
+    }
+    
+    &__nav-link {
+        display: inline-flex;
+        @include text($ui-font-1, 900, 115%, #FFFFFF);
+        font-size: 14px;
+        transition: color $ui-transition-time-1;
+        
+        @include from($b-md) {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        @include from($b-lg) {
+            font-size: 16px;
+        }
+    }
+
+    &__nav-link:hover {
+        @include from($b-md) {
+            color: #FFFFFF;
+        }
+    }
+
+    &__nav-link_active {
+        position: relative;
+        color: #FFFFFF;
+
+        &:before {
+            content: '';
+            display: block;
+            width: 20px;
+            height: 2px;
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #fff;
+        }
+    }
+
+    &__search-text {
+        @include from($b-md) {
+            display: none;
+        }
+    }
+
+    &__search-img {
+        display: none;
+
+        @include from($b-md) {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    &__logo {
+        width: 120px;
+        aspect-ratio: 139 / 22;
+
+        position: relative;
+        z-index: 5;
+
+        @include from($b-md) {
+            width: 160px;
+        }
+
+        @include from($b-desktop) {
+            width: 200px;
+        }
+
+        @include from($b-lg) {
+            width: 240px;
+        }
+
+        @include from($b-xl) {
+            width: 280px;
+        }
+    }
+
+    &__burger {
+        width: 24px;
+        height: 20px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: height 0.4s;
+        cursor: pointer;
+
+        @include from($b-md) {
+            display: none;
+        }
+
+        &-line {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            border-radius: 2px;
+            background: #FFFFFF;
+            transition: $ui-transition-time-2 transform, $ui-transition-time-2 opacity, $ui-transition-time-2 width;
+
+            &:nth-child(1) {
+                top: 0;
+                left: 0;
+                transform-origin: left;
+            }
+
+            &:nth-child(2) {
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+            }
+
+            &:nth-child(3) {
+                left: 0;
+                bottom: 0;
+                transform-origin: left;
+            }
+        }
+
+        &_active {
+            height: 24px;
+
+            @include from($b-phone) {
+                height: 24px;
+            }
+
+            .header__burger-line {
+                height: 3px;
+            }
+
+            .header__burger-line:nth-child(1) {
+                width: 141%;
+                transform: translateY(-50%) rotate(45deg);
+            }
+
+            .header__burger-line:nth-child(2) {
+                opacity: 0;
+            }
+
+            .header__burger-line:nth-child(3) {
+                width: 141%;
+                transform: translateY(50%) rotate(-45deg);
+            }
+        }
+    }
+
+    &__bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        @include from($b-2xl) {
+            max-width: 1920px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__bg_clipped {
+        clip-path: polygon(0 0, 0 100%, 100% calc(100% - 30px), 100% 0);
+
+        @include from($b-md) {
+            clip-path: polygon(
+                0 0,
+                0 100%,
+                22% calc(100% - 12%),
+                41% calc(100% - 12%),
+                41% calc(100% - 22.4%),
+                100% calc(100% - 54.2%),
+                100% 0
+            );
+        }
+    }
+
+    &__bg-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}

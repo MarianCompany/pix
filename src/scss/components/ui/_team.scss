@@ -1,0 +1,111 @@
+.team {
+    &__header {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        @include from($b-md) {
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+            gap: 25px;
+        }
+    }
+
+    &__header-description {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        @include from($b-md) {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        @include from($b-desktop) {
+            align-items: flex-end;
+        }
+
+        @include from($b-lg) {
+            gap: 30px;
+        }
+    }
+
+    &__header-description>.text {
+        @include from($b-md) {
+            max-width: 630px;
+            line-height: 115%;
+        }
+    }
+
+    &__header-link-wrap {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        @include from($b-lg) {
+            gap: 30px;
+        }
+
+        @include from($b-xl) {
+            gap: 50px;
+        }
+    }
+
+    &__header-link-img {
+        width: 130px;
+        aspect-ratio: 13 / 5;
+
+        @include from($b-md) {
+            width: 100px;
+        }
+
+        @include from($b-lg) {
+            width: 120px;
+        }
+
+        @include from($b-xl) {
+            width: 130px;
+        }
+    }
+
+    &__gallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 115px;
+        gap: 10px;
+
+        margin-top: 45px;
+
+        @include from($b-md) {
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 200px;
+            gap: 25px;
+        }
+
+        @include from($b-desktop) {
+            grid-auto-rows: 240px;
+        }
+
+        @include from($b-lg) {
+            grid-auto-rows: 270px;
+        }
+
+        @include from($b-xl) {
+            grid-auto-rows: 300px;
+        }
+
+        @include from($b-2xl) {
+            grid-auto-rows: 325px;
+        }
+    }
+
+    &__gallery .gallery__el_xl {
+        grid-column: span 2 / span 2;
+        grid-row: span 2 / span 2;
+
+        @include from($b-md) {
+            grid-column: initial;
+            grid-row: initial;
+        }
+    }
+}

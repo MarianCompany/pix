@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pixonic</title>
+    <link rel="stylesheet" href="/public/css/main.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="/public/js/main.js"></script>
+</head>
+<body class="body">
+    <header class="header header_abs">
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="header__block">
+                    <svg class="header__logo" viewBox="0 0 118 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_5278_106183)">
+                            <path d="M0 18.387V0.310547H7.30507C9.45952 0.310547 11.1723 0.860117 12.4433 1.95926C13.7143 3.0584 14.3487 4.53784 14.3465 6.39758C14.3465 8.34306 13.6456 9.85877 12.2438 10.9447C10.8421 12.0307 9.07303 12.5725 6.93661 12.5703H3.25872V18.3804L0 18.387ZM3.25872 9.71149H7.0414C8.09274 9.76385 9.12792 9.44287 9.95531 8.80799C10.3095 8.51817 10.5913 8.15343 10.7793 7.74148C10.9673 7.32954 11.0566 6.88121 11.0404 6.43056C11.0662 5.97822 10.9823 5.52631 10.7956 5.11152C10.6088 4.69673 10.3244 4.33073 9.96546 4.04323C9.25219 3.48267 8.27525 3.20568 7.0414 3.20568H3.25872V9.71149Z" fill="white"/>
+                            <path d="M18.8728 18.387V0.310547H22.1281V18.387H18.8728Z" fill="white"/>
+                            <path d="M26.6814 18.387L33.4422 9.1938L26.9484 0.310547H30.7852L35.3893 6.79327L40.0239 0.310547H43.7423L37.2824 9.14104L44.006 18.3738H40.1827L35.3116 11.5317L30.4167 18.3738L26.6814 18.387Z" fill="white"/>
+                            <path d="M62.8652 15.9595C61.033 17.7841 58.7129 18.6964 55.9049 18.6964C53.0969 18.6964 50.7847 17.7929 48.9683 15.9859C47.219 14.2016 46.245 11.8266 46.25 9.35772C46.2551 6.88888 47.2388 4.51761 48.9954 2.74015C50.8298 0.913384 53.151 0 55.959 0C58.767 0 61.0781 0.904596 62.8922 2.71378C64.647 4.49531 65.6247 6.87141 65.6197 9.34197C65.6146 11.8125 64.6272 14.1848 62.8652 15.9595ZM51.4462 13.9052C52.0289 14.4954 52.7278 14.9649 53.5009 15.2856C54.2739 15.6062 55.1054 15.7715 55.9455 15.7715C56.7856 15.7715 57.617 15.6062 58.3901 15.2856C59.1632 14.9649 59.862 14.4954 60.4448 13.9052C61.5843 12.6434 62.2107 11.0182 62.2057 9.33658C62.2007 7.65499 61.5647 6.03337 60.4178 4.77796C59.847 4.16863 59.1487 3.68607 58.3701 3.36293C57.5915 3.03979 56.7508 2.88363 55.9049 2.90503C55.064 2.88121 54.2277 3.03508 53.4534 3.35609C52.6791 3.67709 51.9852 4.15764 51.4191 4.76477C50.2796 6.02664 49.6532 7.65181 49.6582 9.3334C49.6632 11.015 50.2992 12.6366 51.4462 13.892V13.9052Z" fill="white"/>
+                            <path d="M70.5696 18.387V0.310547H73.5883L83.5132 12.8078V0.310547H86.7144V18.387H83.9898L73.7708 5.52707V18.387H70.5696Z" fill="white"/>
+                            <path d="M92.6707 18.387V0.310547H95.9294V18.387H92.6707Z" fill="white"/>
+                            <path d="M110.485 18.6961C109.234 18.726 107.99 18.5013 106.832 18.0363C105.674 17.5714 104.629 16.8763 103.762 15.9955C102.027 14.1983 101.061 11.8229 101.061 9.35449C101.061 6.88604 102.027 4.5107 103.762 2.71349C105.565 0.906505 107.85 0.00190865 110.617 -0.000289633C112.017 -0.037275 113.41 0.209754 114.707 0.725147C115.878 1.23876 116.948 1.94605 117.872 2.81571L115.779 5.16677C114.118 3.66535 112.39 2.91573 110.594 2.91793C109.766 2.89557 108.944 3.05051 108.185 3.37184C107.425 3.69317 106.747 4.17305 106.199 4.77767C105.077 6.04633 104.46 7.66593 104.46 9.34131C104.46 11.0167 105.077 12.6363 106.199 13.9049C106.744 14.5089 107.417 14.9895 108.172 15.313C108.927 15.6365 109.745 15.7952 110.57 15.7779C111.537 15.796 112.496 15.5975 113.372 15.1975C114.296 14.7327 115.144 14.1359 115.887 13.4268L117.98 15.4943C117.039 16.4881 115.917 17.3022 114.67 17.8948C113.352 18.4572 111.924 18.7307 110.485 18.6961Z" fill="white"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_5278_106183">
+                                <rect width="118" height="18.6931" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="header__block">
+                    <nav class="header__nav">
+                        <div class="header__separate-line"></div>
+                        <div class="header__nav-el">
+                            <a href="#" class="header__nav-link header__nav-link_active">
+                                main
+                            </a>
+                        </div>
+                        <div class="header__nav-el">
+                            <a href="#" class="header__nav-link">
+                                games
+                            </a>
+                        </div>
+                        <div class="header__nav-el">
+                            <a href="#" class="header__nav-link">
+                                careers
+                            </a>
+                        </div>
+                        <div class="header__nav-el">
+                            <a href="#" class="header__nav-link">
+                                media
+                            </a>
+                        </div>
+                        <div class="header__nav-el">
+                            <a href="#" class="header__nav-link">
+                                company
+                            </a>
+                        </div>
+                        <div class="header__nav-el">
+                            <a href="#" class="header__nav-link">
+                                    <span class="header__search-text">
+                                        search
+                                    </span>
+                                <img src="/public/img/search.svg" alt="" class="header__search-img">
+                            </a>
+                        </div>
+                    </nav>
+                    <div class="header__burger">
+                        <div class="header__burger-line"></div>
+                        <div class="header__burger-line"></div>
+                        <div class="header__burger-line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="landing index-page__landing">
+            <div class="landing__bg-wrap">
+                <video src="/public/img/main_bg.mp4" muted loop autoplay class="landing__bg landing__bg_desktop">
+                <img src="/public/img/main_bg.jpg" alt="" class="landing__bg landing__bg_sm">
+            </div>
+            <div class="container">
+                <div class="landing__wrapper">
+                    <p class="landing__text">
+                        /Discover our universe of games
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="game-list index-page__game-list">
+            <img src="/public/img/main_bg2.jpg" alt="" class="game-list__bg">
+            <div class="container">
+                <div class="game-list__wrapper">
+                    <div class="game-list__game-slider game-slider">
+                        <img class="game-list__arrow-mobile" src="/public/img/pixel-arrow_down.svg" alt="">
+                        <div class="swiper-wrapper">
+                            <div class="game-slider-item swiper-slide">
+                                <div class="game-slider-item__img-wrap">
+                                    <img src="/public/img/war-robots-preview.jpg" alt="" class="game-slider-item__img">
+                                    <img src="/public/img/war-robots-logo.png" alt="" class="game-slider-item__logo">
+                                </div>
+                                <div class="game-slider-item__text">
+                                    <div class="card card_xl-padding card_bg-black-transparent card_bg-blurred card_bd-gray card_from-md">
+                                        <div class="card card_xl-padding card_bg-black-transparent card_bg-blurred card_bd-gray card_to-md">
+                                            <div class="description">
+                                                <div class="description__block">
+                                                    <p class="text text_white">
+                                                        <span class="game-slider-item__description-title">War Robots</span> is an online third-person PvP shooter — we’re talking dozens of combat robots, hundreds of weapons combinations, and heated clan battles.
+                                                        <br><br>
+                                                        Crush your opponents or capture and hold beacons scattered across the map. Qualify, fight your way to glory and lead your clan to victory.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="description__block">
+                                            <div class="game-slider-item__btn-list">
+                                                <a href="" class="btn btn_white btn_with-icon">
+                                                    <img src="/public/img/google-play.svg" alt="" class="game-slider-item__btn-icon">
+                                                    google play
+                                                </a>
+                                                <a href="" class="btn btn_white btn_with-icon">
+                                                    <img src="/public/img/appstore.svg" alt="" class="game-slider-item__btn-icon">
+                                                    app store
+                                                </a>
+                                                <a href="" class="btn btn_white btn_with-icon">
+                                                    find out more
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="game-slider-item swiper-slide">
+                                <div class="game-slider-item__img-wrap">
+                                    <img src="/public/img/little-big-robots-preview.jpg" alt="" class="game-slider-item__img">
+                                    <img src="/public/img/little-big-robots-logo.png" alt="" class="game-slider-item__logo">
+                                </div>
+                                <div class="game-slider-item__text">
+                                    <div class="card card_xl-padding card_bg-black-transparent card_bg-blurred card_bd-gray card_from-md">
+                                        <div class="card card_xl-padding card_bg-black-transparent card_bg-blurred card_bd-gray card_to-md">
+                                            <div class="description">
+                                                <div class="description__block">
+                                                    <p class="text text_white">
+                                                        <span class="game-slider-item__description-title">War Robots</span> is an online third-person PvP shooter — we’re talking dozens of combat robots, hundreds of weapons combinations, and heated clan battles.
+                                                        <br><br>
+                                                        Crush your opponents or capture and hold beacons scattered across the map. Qualify, fight your way to glory and lead your clan to victory.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="description__block">
+                                            <div class="game-slider-item__btn-list">
+                                                <a href="" class="btn btn_white btn_with-icon">
+                                                    <img src="/public/img/google-play.svg" alt="" class="game-slider-item__btn-icon">
+                                                    google play
+                                                </a>
+                                                <a href="" class="btn btn_white btn_with-icon">
+                                                    <img src="/public/img/appstore.svg" alt="" class="game-slider-item__btn-icon">
+                                                    app store
+                                                </a>
+                                                <a href="" class="btn btn_white btn_with-icon">
+                                                    find out more
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="game-slider-item swiper-slide">
+                                <div class="game-slider-item__img-wrap">
+                                    <img src="/public/img/frontiers-preview.jpg" alt="" class="game-slider-item__img">
+                                    <img src="/public/img/frontiers-logo.png" alt="" class="game-slider-item__logo">
+                                </div>
+                                <div class="game-slider-item__text">
+                                    <div class="card card_xl-padding card_bg-black-transparent card_bg-blurred card_bd-gray card_from-md">
+                                        <div class="card card_xl-padding card_bg-black-transparent card_bg-blurred card_bd-gray card_to-md">
+                                            <div class="description">
+                                                <div class="description__block">
+                                                    <p class="text text_white">
+                                                        <span class="game-slider-item__description-title">War Robots</span> is an online third-person PvP shooter — we’re talking dozens of combat robots, hundreds of weapons combinations, and heated clan battles.
+                                                        <br><br>
+                                                        Crush your opponents or capture and hold beacons scattered across the map. Qualify, fight your way to glory and lead your clan to victory.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="description__block">
+                                            <div class="game-slider-item__btn-list">
+                                                <a href="" class="btn btn_white btn_with-icon">
+                                                    <img src="/public/img/steam.svg" alt="" class="game-slider-item__btn-icon">
+                                                    steam
+                                                </a>
+                                                <a href="" class="btn btn_white btn_with-icon">
+                                                    find out more
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-slider__btn game-slider__btn_prev">
+                            <img src="/public/img/pixel-arrow_down.svg" alt="" class="game-slider__btn-img">
+                        </div>
+                        <div class="game-slider__btn game-slider__btn_next">
+                            <img src="/public/img/pixel-arrow_down.svg" alt="" class="game-slider__btn-img">
+                        </div>
+                    </div>
+                    <div class="game-slider__pagination-wrap">
+                        <div class="swiper-pagination game-slider__pagination">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="team index-page__team">
+            <div class="container">
+                <div class="team__wrapper">
+                    <div class="team__header">
+                        <div class="team__header-description">
+                            <h3 class="team__header-title title title_white title_leading-0">
+                                Team
+                            </h3>
+                            <p class="team__header-text text text_white">
+                                Pixonic is a part of big MY.GAMES family. Everyone in our team is a pro at their craft but also a gamer.
+                                That’s our secret formula.
+                            </p>
+                        </div>
+                        <div class="team__header-link-wrap">
+                            <img src="/public/img/triple-pixel-arrow_right-blue.svg" alt="" class="team__header-link-img">
+                            <a href="" class="btn btn_white team__header-link">
+                                read more
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team__gallery gallery">
+                        <div class="gallery__el gallery__el_xl">
+                            <img src="/public/img/team-gallery.jpg" alt="" class="gallery__img">
+                        </div>
+                        <div class="gallery__el">
+                            <img src="/public/img/about-gallery_4.jpg" alt="" class="gallery__img">
+                        </div>
+                        <div class="gallery__el">
+                            <img src="/public/img/about-gallery_1.jpg" alt="" class="gallery__img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="news index-page__news">
+            <div class="container">
+                <div class="news__wrapper">
+                    <div class="news__header">
+                        <h1 class="title title_font1">
+                            News & Blogs
+                        </h1>
+                    </div>
+                    <div class="news__list">
+                        <div class="news-el news-el_xl">
+                            <div class="news-el__img-wrap">
+                                <img src="/public/img/news-el1.jpg" alt="" class="news-el__img">
+                                <p class="news-el__img-text">
+                                    Today we are happy to unveil War Robots: Frontiers — a brand-new game in the War Robots universe!
+                                </p>
+                            </div>
+                            <div class="news-el__description description">
+                                <div class="description__block">
+                                    <h4 class="news-el__title">
+                                        It's official: War Robots is more than just one game
+                                    </h4>
+                                </div>
+                                <div class="description__block">
+                                    <p class="text text_bold text_gray-dark">
+                                        20/12/2022
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-el">
+                            <div class="news-el__description description">
+                                <div class="description__block">
+                                    <h4 class="news-el__title">
+                                        War Robots Stories Gain Popularity
+                                    </h4>
+                                </div>
+                                <div class="description__block">
+                                    <p class="text text_gray-dark text_leading-115">
+                                        Cinematik About Pilot Drew Over 1,000,000 Views
+                                    </p>
+                                </div>
+                                <div class="description__block">
+                                    <p class="text text_bold text_gray-dark">
+                                        20/12/2022
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-el">
+                            <div class="news-el__description description">
+                                <div class="description__block">
+                                    <h4 class="news-el__title">
+                                        War Robots Stories Gain Popularity
+                                    </h4>
+                                </div>
+                                <div class="description__block">
+                                    <p class="text text_gray-dark text_leading-115">
+                                        Cinematik About Pilot Drew Over 1,000,000 Views
+                                    </p>
+                                </div>
+                                <div class="description__block">
+                                    <p class="text text_bold text_gray-dark">
+                                        20/12/2022
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-el">
+                            <div class="news-el__description description">
+                                <div class="description__block">
+                                    <h4 class="news-el__title">
+                                        Looking for insights?
+                                    </h4>
+                                </div>
+                                <div class="description__block">
+                                    <a href="" class="btn">
+                                        hell yeah
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-el news-el_xl">
+                            <div class="news-el__img-wrap">
+                                <img src="/public/img/news-el1.jpg" alt="" class="news-el__img">
+                                <p class="news-el__img-text">
+                                    Today we are happy to unveil War Robots: Frontiers — a brand-new game in the War Robots universe!
+                                </p>
+                            </div>
+                            <div class="news-el__description description">
+                                <div class="description__block">
+                                    <h4 class="news-el__title">
+                                        It's official: War Robots is more than just one game
+                                    </h4>
+                                </div>
+                                <div class="description__block">
+                                    <p class="text text_bold text_gray-dark">
+                                        20/12/2022
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-el">
+                            <div class="news-el__description description">
+                                <div class="description__block">
+                                    <h4 class="news-el__title">
+                                        War Robots Stories Gain Popularity
+                                    </h4>
+                                </div>
+                                <div class="description__block">
+                                    <p class="text text_gray-dark text_leading-115">
+                                        Cinematik About Pilot Drew Over 1,000,000 Views
+                                    </p>
+                                </div>
+                                <div class="description__block">
+                                    <p class="text text_bold text_gray-dark">
+                                        20/12/2022
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-el">
+                            <div class="news-el__description description">
+                                <div class="description__block">
+                                    <h4 class="news-el__title">
+                                        War Robots Stories Gain Popularity
+                                    </h4>
+                                </div>
+                                <div class="description__block">
+                                    <p class="text text_gray-dark text_leading-115">
+                                        Cinematik About Pilot Drew Over 1,000,000 Views
+                                    </p>
+                                </div>
+                                <div class="description__block">
+                                    <p class="text text_bold text_gray-dark">
+                                        20/12/2022
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-el">
+                            <div class="news-el__description description">
+                                <div class="description__block">
+                                    <h4 class="news-el__title">
+                                        Looking for insights?
+                                    </h4>
+                                </div>
+                                <div class="description__block">
+                                    <a href="" class="btn">
+                                        hell yeah
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-el news-el_xl">
+                            <div class="news-el__img-wrap">
+                                <img src="/public/img/news-el1.jpg" alt="" class="news-el__img">
+                                <p class="news-el__img-text">
+                                    Today we are happy to unveil War Robots: Frontiers — a brand-new game in the War Robots universe!
+                                </p>
+                            </div>
+                            <div class="news-el__description description">
+                                <div class="description__block">
+                                    <h4 class="news-el__title">
+                                        It's official: War Robots is more than just one game
+                                    </h4>
+                                </div>
+                                <div class="description__block">
+                                    <p class="text text_bold text_gray-dark">
+                                        20/12/2022
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-el">
+                            <div class="news-el__description description">
+                                <div class="description__block">
+                                    <h4 class="news-el__title">
+                                        War Robots Stories Gain Popularity
+                                    </h4>
+                                </div>
+                                <div class="description__block">
+                                    <p class="text text_gray-dark text_leading-115">
+                                        Cinematik About Pilot Drew Over 1,000,000 Views
+                                    </p>
+                                </div>
+                                <div class="description__block">
+                                    <p class="text text_bold text_gray-dark">
+                                        20/12/2022
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-el">
+                            <div class="news-el__description description">
+                                <div class="description__block">
+                                    <h4 class="news-el__title">
+                                        War Robots Stories Gain Popularity
+                                    </h4>
+                                </div>
+                                <div class="description__block">
+                                    <p class="text text_gray-dark text_leading-115">
+                                        Cinematik About Pilot Drew Over 1,000,000 Views
+                                    </p>
+                                </div>
+                                <div class="description__block">
+                                    <p class="text text_bold text_gray-dark">
+                                        20/12/2022
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-el">
+                            <div class="news-el__description description">
+                                <div class="description__block">
+                                    <h4 class="news-el__title">
+                                        Looking for insights?
+                                    </h4>
+                                </div>
+                                <div class="description__block">
+                                    <a href="" class="btn">
+                                        hell yeah
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="index-page__footer footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__social-list">
+                    <a href="" class="footer__social">
+                        <img src="/public/img/instagram.svg" alt="" class="footer__social-img">
+                        <div class="footer__social-name">
+                            instagram
+                        </div>
+                    </a>
+                    <a href="" class="footer__social">
+                        <img src="/public/img/linkedin.svg" alt="" class="footer__social-img">
+                        <div class="footer__social-name">
+                            linkedin
+                        </div>
+                    </a>
+                    <div class="footer__social-separate-line"></div>
+                    <a href="" class="footer__social">
+                        <img src="/public/img/facebook.svg" alt="" class="footer__social-img">
+                        <div class="footer__social-name">
+                            facebook
+                        </div>
+                    </a>
+                    <a href="" class="footer__social">
+                        <img src="/public/img/twitter.svg" alt="" class="footer__social-img">
+                        <div class="footer__social-name">
+                            twitter
+                        </div>
+                    </a>
+                </div>
+                <div class="footer__separate-line"></div>
+                <div class="footer__link-list">
+                    <a href="" class="footer__link">
+                        Terms Of Service
+                    </a>
+                    <a href="" class="footer__link">
+                        Privacy Policy
+                    </a>
+                    <a href="" class="footer__link">
+                        Cookie Policy
+                    </a>
+                    <div href="" class="footer__link js-toggle-contacts">
+                        Contacts
+                    </div>
+                </div>
+                <div class="footer__contacts-content">
+                    <div class="footer__contacts-block">
+                        <p class="text text_font-3 text_semibold text_white">
+                            3035, 243, 28 th Oktovriou Street, Limassol, Cyprus
+                        </p>
+                    </div><div class="footer__contacts-block">
+                    <a href="mailto:ask@pixonic.com" class="text text_font-3 text_semibold text_white">
+                        ask@pixonic.com
+                    </a>
+                </div>
+                </div>
+                <div class="footer__additional">
+                    <p class="text text_font-3 text_sm text_semibold text_gray text_leading-115">
+                        © 2023 MY.GAMES HOLDINGS LTD. All rights reserved. All trademarks are the property of their respective owners.
+                    </p>
+                </div>
+                <div class="footer__logo-list">
+                    <a href="" class="footer__logo-link">
+                        <img src="/public/img/pixonic.svg" alt="" class="footer__logo">
+                    </a>
+                    <a href="" class="footer__logo-link">
+                        <img src="/public/img/mygames.svg" alt="" class="footer__logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

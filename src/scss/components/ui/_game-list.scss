@@ -1,0 +1,126 @@
+@use 'sass:math';
+
+.game-list {
+    position: relative;
+
+    &__wrapper {
+        position: relative;
+        margin-top: -100px;
+
+        @include from($b-md) {
+            margin-top: 0;
+            padding-top: 25px;
+        }
+    }
+
+    &__bg {
+        max-width: 450px;
+        width: 100%;
+        height: 1140px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        object-fit: cover;
+        object-position: center;
+        filter: brightness(80%);
+        z-index: -1;
+
+        clip-path: polygon(0 0, 0 100%, 100% 90%, 100% 0);
+
+        @include from($b-md) {
+            max-width: none;
+            height: 900px;
+            clip-path: polygon(
+                0 0,
+                0 100%,
+                48% (100% - math.div(48vw * 30%, 100vw)),
+                72% (100% - math.div(48vw * 30%, 100vw)),
+                72% (100% - math.div(72vw * 30%, 100vw)),
+                72% (100% - math.div(72vw * 30%, 100vw)),
+                96% (100% - math.div(72vw * 30%, 100vw)),
+                96% (100% - math.div(96vw * 30%, 100vw)),
+                100% 70%,
+                100% 0
+            );
+        }
+
+        @include from($b-desktop) {
+            height: 825px;
+            clip-path: polygon(
+                0 0,
+                0 100%,
+                48% (100% - math.div(48vw * 35%, 100vw)),
+                72% (100% - math.div(48vw * 35%, 100vw)),
+                72% (100% - math.div(72vw * 35%, 100vw)),
+                72% (100% - math.div(72vw * 35%, 100vw)),
+                96% (100% - math.div(72vw * 35%, 100vw)),
+                96% (100% - math.div(96vw * 35%, 100vw)),
+                100% 65%,
+                100% 0
+            );
+        }
+
+        @include from($b-lg) {
+            height: 915px;
+            clip-path: polygon(
+                0 0,
+                0 100%,
+                51% (100% - math.div(51vw * 42.5%, 100vw)),
+                73% (100% - math.div(51vw * 42.5%, 100vw)),
+                73% (100% - math.div(73vw * 42.5%, 100vw)),
+                73% (100% - math.div(73vw * 42.5%, 100vw)),
+                95% (100% - math.div(73vw * 42.5%, 100vw)),
+                95% (100% - math.div(95vw * 42.5%, 100vw)),
+                100% 57.5%,
+                100% 0
+            );
+        }
+
+        @include from($b-xl) {
+            height: 1000px;
+            clip-path: polygon(
+                0 0,
+                0 100%,
+                49% (100% - math.div(49vw * 42.5%, 100vw)),
+                75% (100% - math.div(49vw * 42.5%, 100vw)),
+                75% (100% - math.div(75vw * 42.5%, 100vw)),
+                75% (100% - math.div(75vw * 42.5%, 100vw)),
+                95% (100% - math.div(75vw * 42.5%, 100vw)),
+                95% (100% - math.div(95vw * 42.5%, 100vw)),
+                100% 57.5%,
+                100% 0
+            );
+        }
+
+        @include from($b-2xl) {
+            height: 1090px;
+            clip-path: polygon(
+                0 0,
+                0 100%,
+                49% (100% - math.div(49vw * 45%, 100vw)),
+                75% (100% - math.div(49vw * 45%, 100vw)),
+                75% (100% - math.div(75vw * 45%, 100vw)),
+                75% (100% - math.div(75vw * 45%, 100vw)),
+                92% (100% - math.div(75vw * 45%, 100vw)),
+                92% (100% - math.div(92vw * 45%, 100vw)),
+                100% 55%,
+                100% 0
+            );
+        }
+    }
+
+    &__arrow-mobile {
+        position: absolute;
+        left: 50%;
+        top: -25px;
+        transform: translate(-50%, -100%);
+
+        @include from($b-md) {
+            display: none;
+        }
+    }
+
+    &__game-slider {
+
+    }
+}

@@ -1,0 +1,15 @@
+.news {
+    &__list {
+        margin-top: 25px;
+
+        @include from($b-md) {
+            display: grid;
+            grid-template-columns: 15fr 22fr;
+            column-gap: 25px;
+        }
+
+        @include from($b-desktop) {
+            column-gap: 50px;
+        }
+    }
+}

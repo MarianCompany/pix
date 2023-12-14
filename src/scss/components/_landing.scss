@@ -1,0 +1,66 @@
+.landing {
+    position: relative;
+
+    &__bg-wrap {
+        max-width: 450px;
+        width: 100%;
+        display: flex;
+        margin: 0 auto;
+        overflow: hidden;
+
+        @include from($b-md) {
+            max-width: none;
+            width: 100vw;
+            height: min(100vh, 100%);
+        }
+    }
+
+    &__bg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        z-index: -1;
+
+        @include from($b-md) {
+            filter: brightness(50%);
+        }
+    }
+
+    &__bg_sm {
+        @include from($b-md) {
+            display: none;
+        }
+    }
+
+    &__bg_desktop {
+        display: none;
+
+        @include from($b-md) {
+            display: inline-block;
+        }
+    }
+
+    &__text {
+        position: absolute;
+        bottom: 200px;
+
+        font-family: $ui-font-1;
+        font-weight: 700;
+        font-size: 14px;
+        color: #FFFFFF;
+
+        @include from($b-md) {
+            bottom: 220px;
+            font-size: 24px;
+        }
+
+        @include from($b-lg) {
+            font-size: 36px;
+        }
+
+        @include from($b-xl) {
+            font-size: 40px;
+        }
+    }
+}

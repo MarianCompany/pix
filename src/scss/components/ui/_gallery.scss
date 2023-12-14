@@ -1,0 +1,89 @@
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px;
+
+    @include from($b-md) {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+
+    &_column-from-md {
+        @include from($b-md) {
+            grid-auto-flow: column;
+        }
+    }
+
+    &_gap-xl {
+        gap: 10px;
+
+        @include from($b-md) {
+            gap: 16px;
+        }
+
+        @include from($b-lg) {
+            gap: 28px;
+        }
+    }
+
+    &__el {
+        position: relative;
+    }
+
+    &_first-to-md {
+        @include to(calc($b-md - 0.1)) {
+            grid-column-start: 1;
+            grid-row-start: 1;
+        }
+    }
+
+    &__el_xxl {
+        grid-row: span 3 / span 3;
+        grid-column: span 2 / span 2;
+    }
+
+    &__el_xl {
+        grid-row: span 2 / span 2;
+        grid-column: span 2 / span 2;
+
+        @include from($b-md) {
+            grid-row: initial;
+        }
+    }
+
+    &__el_md {
+        grid-column: span 2 / span 2;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &__card {
+        height: 100%;
+    }
+
+    &__description {
+        width: 100%;
+        max-height: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: 20px;
+
+        @include from($b-md) {
+            padding: 30px;
+        }
+
+        @include from($b-lg) {
+            padding: 40px;
+        }
+
+        @include from($b-xl) {
+            padding: 50px;
+        }
+    }
+}

@@ -1,0 +1,75 @@
+.title {
+    font-family: $ui-font-2;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 120%;
+    color: #000;
+
+    @include from($b-md) {
+        font-size: 40px;
+    }
+
+    @include from($b-desktop) {
+        font-size: 50px;
+    }
+
+    @include from($b-lg) {
+        font-size: 60px;
+    }
+
+    @include from($b-xl) {
+        font-size: 70px;
+    }
+
+    &_sm {
+        font-size: 30px;
+
+        @include from($b-desktop) {
+            font-size: 35px;
+        }
+
+        @include from($b-xl) {
+            font-size: 40px;
+        }
+    }
+
+    &_white {
+        color: #FFFFFF;
+    }
+
+    &_font1 {
+        font-family: $ui-font-1;
+    }
+
+    &_leading-0 {
+        line-height: 20px;
+
+        @include from($b-md) {
+            line-height: 30px;
+        }
+
+        @include from($b-desktop) {
+            line-height: 40px;
+        }
+
+        @include from($b-lg) {
+            line-height: 45px;
+        }
+
+        @include from($b-xl) {
+            line-height: 50px;
+        }
+    }
+
+    &_sm.title_leading-0 {
+        line-height: 20px;
+
+        @include from($b-desktop) {
+            line-height: 25px;
+        }
+
+        @include from($b-xl) {
+            line-height: 30px;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+html, body {
+  font-family: SourceCode, Source3, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+}
+
+body {
+  max-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  background: #FFFFFF;
+}
+
+.body_popup-active {
+  overflow: hidden;
+}
+
+main {
+  flex: 1;
+  padding-bottom: 40px;
+  overflow: hidden;
+
+  @include from($b-desktop) {
+    padding-bottom: 60px;
+  }
+
+  @include from($b-xl) {
+    padding-bottom: 80px;
+  }
+
+}
+
+.page__wrapper > * {
+  
+}

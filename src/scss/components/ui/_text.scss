@@ -1,0 +1,48 @@
+.text {
+    font-family: $ui-font-1;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 160%;
+    color: #000;
+
+    @include from($b-lg) {
+        font-size: 16px;
+    }
+
+    &_font-3 {
+        font-family: $ui-font-3;
+    }
+
+    &_sm {
+        font-size: 12px;
+        line-height: normal;
+
+        @include from($b-lg) {
+            font-size: 14px;
+        }
+    }
+
+    &_semibold {
+        font-weight: 600;
+    }
+
+    &_bold {
+        font-weight: 700;
+    }
+
+    &_leading-115 {
+        line-height: 115%;
+    }
+
+    &_white {
+        color: #FFFFFF;
+    }
+
+    &_gray {
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    &_gray-dark {
+        color: rgba(0, 0, 0, 0.5);
+    }
+}

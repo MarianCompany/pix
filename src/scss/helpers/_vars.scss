@@ -1,0 +1,30 @@
+$ui-c-white-gray: rgba(255, 255, 255, 0.7);
+$ui-c-bg-dark: #0F0F0F;
+$ui-c-bg-dark-light: rgba(0, 0, 0, 0.6);
+
+$ui-c-brand: #0C16FA;
+
+$ui-font-1: SourceCode, sans-serif;
+$ui-font-2: Source3, sans-serif;
+$ui-font-3: SourcePro, sans-serif;
+
+/*
+    b = breakpoint
+    Значения указаны в пикселях
+*/
+
+$b-phone: 375;
+$b-xs: 450;
+$b-sm: 576;
+$b-tablet: 768;
+$b-md: 992;
+$b-desktop: 1200;
+$b-lg: 1440;
+$b-xl: 1600;
+$b-2xl: 1920;
+$b-3xl: 2240;
+$b-4xl: 2560;
+
+$ui-transition-time-1: 0.3s;
+$ui-transition-time-2: 0.4s;
+$ui-transition-time-3: 0.6s;

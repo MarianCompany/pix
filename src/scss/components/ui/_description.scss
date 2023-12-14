@@ -1,0 +1,17 @@
+.description {
+    &__header {
+
+    }
+
+    &__content:not(&__content:first-child) {
+        margin-top: 10px;
+    }
+
+    &__block {
+        margin-top: 15px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}

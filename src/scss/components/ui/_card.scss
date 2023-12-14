@@ -1,0 +1,55 @@
+.card {
+    &_default-padding {
+        padding: 30px 20px;
+    }
+
+    &_xl-padding {
+        padding: 30px 20px;
+
+        @include from($b-desktop) {
+            padding: 40px 30px;
+        }
+
+        @include from($b-xl) {
+            padding: 50px 40px;
+        }
+    }
+
+    &_bg-brand {
+        background-color: $ui-c-brand;
+    }
+
+    &_bg-black {
+        background-color: #000000;
+    }
+
+    &_bg-black-transparent {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    &_bg-blurred {
+        backdrop-filter: blur(5px);
+    }
+
+    &_bd-gray {
+        border: 1px solid rgba(#FFFFFF, 0.25);
+    }
+
+    &_to-md {
+        @include from($b-md) {
+            padding: 0;
+            background-color: transparent;
+            backdrop-filter: none;
+            border: none;
+        }
+    }
+
+    &_from-md {
+        @include to(calc($b-md - 0.1)) {
+            padding: 0;
+            background-color: transparent;
+            backdrop-filter: none;
+            border: none;
+        }
+    }
+}

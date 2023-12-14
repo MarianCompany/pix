@@ -1,0 +1,38 @@
+.page {
+    &__wrapper {
+        padding-top: 25px;
+
+        @include from($b-md) {
+            margin-top: 35px;
+        }
+
+        @include from($b-lg) {
+            margin-top: 40px;
+        }
+
+        @include from($b-xl) {
+            margin-top: 50px;
+        }
+    }
+
+
+    &__el {
+        margin-top: 24px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        @include from($b-md) {
+            margin-top: 36px;
+        }
+
+        @include from($b-lg) {
+            margin-top: 48px;
+        }
+
+        @include from($b-xl) {
+            margin-top: 60px;
+        }
+    }
+}

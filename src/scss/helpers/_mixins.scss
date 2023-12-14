@@ -1,0 +1,18 @@
+@mixin to($max-width) {
+    @media (max-width: $max-width + 'px') {
+        @content;
+    }
+}
+
+@mixin from($min-width) {
+    @media (min-width: $min-width + 'px') {
+        @content;
+    }
+}
+
+@mixin text($ff, $fw, $lh, $c) {
+    font-family: $ff;
+    font-weight: $fw;
+    line-height: $lh;
+    color: $c;
+}

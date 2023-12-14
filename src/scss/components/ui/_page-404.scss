@@ -1,0 +1,43 @@
+.page-404 {
+    width: 290px;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 100px;
+
+    @include from($b-md) {
+        width: 375px;
+    }
+
+    @include from($b-desktop) {
+        width: 450px;
+    }
+
+    @include from($b-lg) {
+        width: 550px;
+    }
+
+    @include from($b-xl) {
+        width: 650px;
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+    }
+
+    &__bg {
+        width: 125%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__btn-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+    }
+}
