@@ -36,6 +36,10 @@
     &_white {
         color: #FFFFFF;
     }
+    
+    &_yellow {
+        color: #FFCE00;
+    }
 
     &_font1 {
         font-family: $ui-font-1;
@@ -71,5 +75,9 @@
         @include from($b-xl) {
             line-height: 30px;
         }
+    }
+    
+    &_uppercase {
+        text-transform: uppercase;
     }
 }

@@ -1,0 +1,72 @@
+.game-trailer {
+    &__content {
+        margin-top: 20px;
+
+        @include from($b-md) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        @include from($b-lg) {
+            margin-top: 30px;
+        }
+
+        @include from($b-xl) {
+            margin-top: 40px;
+        }
+    }
+
+    &__video-link {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        display: flex;
+    }
+
+    &__poster {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &__description-wrap {
+        margin-top: 30px;
+
+        @include from($b-md) {
+            margin-top: 0;
+        }
+    }
+
+    &__description-wrap .text {
+        @include from($b-md) {
+            font-size: 18px;
+        }
+
+        @include from($b-desktop) {
+            font-size: 20px;
+        }
+
+        @include from($b-lg) {
+            font-size: 22px;
+        }
+
+        @include from($b-xl) {
+            font-size: 24px;
+        }
+    }
+
+    &__description-btn-wrap {
+        text-align: center;
+        margin-top: 30px;
+
+        @include from($b-md) {
+            text-align: left;
+        }
+
+        @include from($b-desktop) {
+            margin-top: 45px;
+        }
+    }
+}

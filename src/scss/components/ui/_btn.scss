@@ -23,9 +23,26 @@
         padding: 16px 15px;
     }
 
+    &_xl {
+        height: 60px;
+        padding: 0 30px;
+
+        @include from($b-desktop) {
+            font-size: 16px;
+        }
+    }
+
     &_white {
         color: rgba(#FFFFFF, 0.7);
         border-color: rgba(#FFFFFF, 0.7);
+    }
+
+    &_text-white {
+        color: #FFFFFF;
+    }
+    
+    &_text-black {
+        color: #000;
     }
 
     &_with-icon {
@@ -33,5 +50,10 @@
         align-items: center;
         justify-content: center;
         gap: 10px;
+    }
+
+    &_auto-width {
+        min-width: 0;
+        width: auto;
     }
 }

@@ -1,0 +1,37 @@
+.checkbox {
+    &__label {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 15px;
+        cursor: pointer;
+    }
+
+    &__label:not(&__label.active):hover &__mark:after {
+        background-color: #FFFFFF;
+        opacity: 0.1;
+    }
+
+    &__label.active &__mark:after {
+        opacity: 1;
+    }
+
+    &__mark {
+        width: 25px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        background: rgba(#FFFFFF, 0.1);
+    }
+
+    &__mark:after {
+        content: '';
+        width: 50%;
+        height: 50%;
+        background: $ui-c-brand;
+        opacity: 0;
+        transition: 0.125s opacity, 0.125s background-color;
+    }
+}

@@ -12,4 +12,10 @@
             column-gap: 50px;
         }
     }
+
+    &__list_simple {
+        @include from($b-md) {
+            grid-template-columns: 1fr;
+        }
+    }
 }

@@ -1,0 +1,178 @@
+.game-description {
+    position: relative;
+    width: 100%;
+    min-height: 740px;
+    padding: 35px 20px;
+
+
+    background-size: cover;
+    background-position: center;
+
+    @include from($b-md) {
+        min-height: 0;
+        height: auto;
+        aspect-ratio: 95 / 49;
+        padding: 40px;
+    }
+
+    @include from($b-lg) {
+        padding: 60px;
+    }
+
+    @include from($b-xl) {
+        padding: 80px;
+    }
+
+    &_right .game-description__description {
+        @include from($b-md) {
+            width: 55%;
+            margin-left: auto;
+        }
+    }
+
+    &_war-robots-1 {
+        background-image: url('/pixonic/public/img/war-robots-description_sm.jpg');
+
+        @include from($b-md) {
+            background-image: url('/pixonic/public/img/war-robots-description.jpg');
+        }
+    }
+
+    &_war-robots-2 {
+        background-image: url('/pixonic/public/img/war-robots-description2_sm.jpg');
+
+        @include from($b-md) {
+            background-image: url('/pixonic/public/img/war-robots-description2.jpg');
+        }
+    }
+
+    &_frontiers-1 {
+        background-image: url('/pixonic/public/img/frontiers-description_sm.jpg');
+
+        @include from($b-md) {
+            background-image: url('/pixonic/public/img/frontiers-description.jpg');
+        }
+    }
+
+    &_frontiers-2 {
+        background-image: url('/pixonic/public/img/frontiers-description2_sm.jpg');
+
+        @include from($b-md) {
+            background-image: url('/pixonic/public/img/frontiers-description2.jpg');
+        }
+    }
+
+    &_little-big-robots-1 {
+        background-image: url('/pixonic/public/img/little-big-robots-description_sm.jpg');
+
+        @include from($b-md) {
+            background-image: url('/pixonic/public/img/little-big-robots-description.jpg');
+        }
+    }
+    &_little-big-robots-2 {
+        background-image: url('/pixonic/public/img/little-big-robots-description2_sm.jpg');
+
+        @include from($b-md) {
+            background-image: url('/pixonic/public/img/little-big-robots-description2.jpg');
+        }
+    }
+
+    &__description {
+        @include from($b-md) {
+            width: 50%;
+        }
+    }
+
+    &__description .description__block {
+        @include from($b-desktop) {
+            margin-top: 45px;
+        }
+
+        @include from($b-xl) {
+            margin-top: 60px;
+        }
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    &__description .text {
+        @include from($b-desktop) {
+            font-size: 18px;
+        }
+
+        @include from($b-lg) {
+            font-size: 22px;
+        }
+
+        @include from($b-xl) {
+            font-size: 26px;
+        }
+
+        @include from($b-2xl) {
+            font-size: 28px;
+        }
+    }
+
+    &__description .title {
+        @include from($b-md) {
+            white-space: nowrap;
+        }
+    }
+
+    &__disclaimer-text {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 10px;
+        padding: 0 15px;
+        display: inline-block;
+
+        font-size: 12px;
+
+        @include from(400) {
+            position: static;
+            margin-top: 15px;
+            padding: 0;
+        }
+
+        @include from($b-md) {
+            position: absolute;
+            margin: 0;
+            left: 0;
+            bottom: 30px;
+            padding-left: 40px;
+        }
+
+        @include from($b-desktop) {
+            font-size: 16px;
+        }
+
+        @include from($b-lg) {
+            font-size: 18px;
+            padding-left: 60px;
+        }
+
+        @include from($b-xl) {
+            font-size: 20px;
+            padding-left: 80px;
+        }
+
+        @include from($b-2xl) {
+            font-size: 24px;
+        }
+    }
+
+    &__text-with-icon {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 25px;
+    }
+
+    &__icon {
+        width: 35px;
+        height: 40px;
+    }
+}

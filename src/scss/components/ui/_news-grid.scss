@@ -1,0 +1,115 @@
+.news-grid {
+    position: relative;
+    max-width: 100%;
+
+    @include to($b-md - 0.1) {
+        padding-top: 25px;
+
+        &:before {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            height: 1px;
+            width: 100%;
+            top: 0;
+            background-color: rgba(#000000, 0.3);
+        }
+
+        .swiper-wrapper {
+            display: grid !important;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px 8px;
+        }
+    }
+
+    @include from($b-md) {
+        overflow: hidden;
+    }
+
+    &__el {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__el-description {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__el-img {
+        max-width: 360px;
+        width: 100%;
+        aspect-ratio: 17 / 11;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &__el-title {
+        font-family: $ui-font-1;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 125%;
+    }
+
+    &__btn {
+        width: 40px;
+        height: 40px;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        z-index: 2;
+        cursor: pointer;
+
+        @include from($b-md) {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            top: 35%;
+        }
+
+        @include from($b-xl) {
+            top: 40%;
+        }
+    }
+
+    &__btn-img {
+        aspect-ratio: 3 / 5;
+
+        @include from($b-md) {
+            height: 45px;
+        }
+
+        @include from($b-lg) {
+            height: 60px;
+        }
+    }
+
+    &__btn_prev {
+        left: 0;
+        transform: translate(-50%, -50%) rotate(180deg);
+
+        @include from($b-md) {
+            left: -35px;
+        }
+
+        @include from($b-xl) {
+            left: -60px;
+        }
+    }
+
+    &__btn_next {
+        right: 0;
+        transform: translate(50%, -50%);
+
+        @include from($b-md) {
+            right: -35px;
+        }
+
+        @include from($b-xl) {
+            right: -60px;
+        }
+    }
+}

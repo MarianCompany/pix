@@ -19,6 +19,10 @@
 }
 
 .footer {
+    @include from($b-md) {
+        padding-bottom: 100px;
+    }
+
     &__wrapper {
         position: relative;
         padding: 30px 40px;

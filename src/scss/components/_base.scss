@@ -18,6 +18,12 @@ body {
   overflow: hidden;
 }
 
+.body {
+    &_bg-black {
+        background-color: #121212;
+    }
+}
+
 main {
   flex: 1;
   padding-bottom: 40px;
@@ -30,9 +36,12 @@ main {
   @include from($b-xl) {
     padding-bottom: 80px;
   }
+}
 
+main.no-overflow {
+  overflow: initial;
 }
 
 .page__wrapper > * {
-  
+
 }

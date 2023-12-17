@@ -1,0 +1,202 @@
+.form {
+    padding: 25px 18px 40px;
+    background-color: #000000;
+
+    @include from($b-md) {
+        padding: 30px 60px 50px 30px;
+    }
+
+    @include from($b-desktop) {
+        padding: 30px 100px 50px 50px;
+    }
+
+    @include from($b-lg) {
+        padding: 30px 120px 50px 60px;
+    }
+
+    @include from($b-xl) {
+        padding: 30px 140px 50px 60px;
+    }
+
+    &__header-title {
+        font-size: 24px;
+        color: #FFFFFF;
+
+        @include from($b-desktop) {
+            max-width: 75%;
+            font-size: 35px;
+        }
+
+        @include from($b-xl) {
+            font-size: 40px;
+        }
+    }
+
+    &__content  {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin-top: 30px;
+
+        @include from($b-md) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(4, auto);
+            grid-auto-flow: column;
+            column-gap: 25px;
+        }
+    }
+
+    &__block {
+        display: flex;
+    }
+
+    &__block_2-rows {
+        @include from($b-md) {
+            grid-row: span 2 / span 2;
+        }
+    }
+
+    &__block:last-child {
+        align-self: flex-end;
+    }
+
+    &__input-text-wrap {
+        width: 100%;
+        padding: 5px 0;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    &__input-text {
+        width: 100%;
+        min-width: 0;
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+        padding: 0;
+
+        font-family: $ui-font-1;
+        font-weight: 500;
+        font-size: 14px;
+        color: #FFFFFF;
+        line-height: 115%;
+
+        outline:none;
+
+        @include from($b-desktop) {
+            font-size: 16px;
+        }
+    }
+
+    &__input-text::placeholder {
+        color: #FFFFFF;
+        opacity: 0.8;
+    }
+
+    &__input-file-wrap {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        @include from($b-md) {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            column-gap: 15px;
+            row-gap: 10px;
+        }
+    }
+
+    &__file {
+        display: none;
+        width: 100%;
+        height: 48px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 15px;
+
+        border: 2px solid $ui-c-brand;
+    }
+
+    &__file_active {
+        display: flex;
+    }
+
+    &__file-name {
+        font-family: $ui-font-1;
+        font-weight: 600;
+        font-size: 14px;
+        color: #C4C4C4;
+        line-height: 100%;
+
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        @include from($b-desktop) {
+            font-size: 16px;
+        }
+    }
+
+    &__file-cross {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    &__input-file {
+        width: 100%;
+        height: 48px;
+        display: flex;
+        padding: 15px;
+
+        font-family: $ui-font-1;
+        font-weight: 600;
+        font-size: 14px;
+        color: #C4C4C4;
+        line-height: 100%;
+
+        border: 2px solid $ui-c-brand;
+        cursor: pointer;
+
+        @include from($b-desktop) {
+            font-size: 16px;
+        }
+    }
+
+    &__file.form__file_active + &__input-file {
+        margin-top: 15px;
+
+        @include from($b-md) {
+            margin-top: 0;
+        }
+    }
+
+    &__input-file-info {
+        margin-top: 24px;
+
+        @include from($b-md) {
+            margin-top: 0;
+            grid-column: span 2 / span 2;
+        }
+    }
+
+    &__submit {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 15px;
+
+        margin-top: 25px;
+
+        @include from($b-md) {
+            justify-content: flex-end;
+        }
+    }
+
+    &__submit-arrow {
+        width: 50px;
+        height: 30px;
+        transform: rotate(-90deg);
+    }
+}
