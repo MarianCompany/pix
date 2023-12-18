@@ -239,5 +239,10 @@
         height: 40px;
         object-fit: contain;
         object-position: center;
+
+        @include from($b-lg) {
+            width: 220px;
+            height: 55px;
+        }
     }
 }

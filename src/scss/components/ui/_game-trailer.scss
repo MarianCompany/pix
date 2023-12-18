@@ -4,7 +4,7 @@
 
         @include from($b-md) {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 25px;
             margin-top: 25px;
         }
@@ -41,19 +41,20 @@
 
     &__description-wrap .text {
         @include from($b-md) {
-            font-size: 18px;
+            font-size: 16px;
+            line-height: 120%;
         }
 
         @include from($b-desktop) {
-            font-size: 20px;
+            font-size: 18px;
         }
 
         @include from($b-lg) {
-            font-size: 22px;
+            font-size: 20px;
         }
 
         @include from($b-xl) {
-            font-size: 24px;
+            font-size: 22px;
         }
     }
 

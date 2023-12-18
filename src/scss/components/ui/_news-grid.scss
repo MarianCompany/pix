@@ -51,6 +51,22 @@
         font-size: 16px;
         font-weight: 700;
         line-height: 125%;
+
+        @include from($b-md) {
+            font-size: 18px;
+        }
+
+        @include from($b-desktop) {
+            font-size: 22px;
+        }
+
+        @include from($b-lg) {
+            font-size: 26px;
+        }
+
+        @include from($b-xl) {
+            font-size: 30px;
+        }
     }
 
     &__btn {

@@ -23,6 +23,13 @@
         padding: 80px;
     }
 
+    &_right {
+        @include from($b-md) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
     &_right .game-description__description {
         @include from($b-md) {
             width: 55%;

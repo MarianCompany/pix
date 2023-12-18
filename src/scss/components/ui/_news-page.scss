@@ -52,5 +52,13 @@
 
     &__grid {
         position: relative;
+
+        @include from($b-md) {
+            margin-top: 30px;
+        }
+
+        @include from($b-xl) {
+            margin-top: 40px;
+        }
     }
 }

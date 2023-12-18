@@ -14,7 +14,7 @@
     }
 
     &:not(.swiper-slide-active) {
-        filter: brightness(75%) blur(3px);
+        filter: brightness(75%) blur(4px);
 
         transition: filter $ui-transition-time-2;
     }
@@ -48,6 +48,26 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+
+        @include from($b-md) {
+            width: 345px;
+            height: 145px;
+        }
+
+        @include from($b-desktop) {
+            width: 455px;
+            height: 190px;
+        }
+
+        @include from($b-lg) {
+            width: 565px;
+            height: 235px;
+        }
+
+        @include from($b-xl) {
+            width: 675px;
+            height: 280px;
+        }
     }
 
     &__text {
