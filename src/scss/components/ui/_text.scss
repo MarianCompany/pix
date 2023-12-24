@@ -1,5 +1,5 @@
 .text {
-    font-family: $ui-font-1;
+    font-family: $ui-font-3;
     font-weight: 500;
     font-size: 14px;
     line-height: 160%;
@@ -11,6 +11,10 @@
 
     &_font-3 {
         font-family: $ui-font-3;
+    }
+
+    &_font-1 {
+        font-family: $ui-font-1;
     }
 
     &_sm {

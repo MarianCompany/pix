@@ -33,8 +33,16 @@
 
     &__header-description>.text {
         @include from($b-md) {
-            max-width: 630px;
-            line-height: 115%;
+            max-width: 380px;
+            line-height: 125%;
+        }
+
+        @include from($b-lg) {
+            max-width: 430px;
+        }
+
+        @include from($b-xl) {
+            line-height: 150%;
         }
     }
 

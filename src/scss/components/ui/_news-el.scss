@@ -57,34 +57,30 @@
         bottom: 0;
         padding: 20px 15px;
 
-        font-family: $ui-font-2;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 150%;
+        font-family: $ui-font-3;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 125%;
         color: #FFFFFF;
 
         @include from($b-md) {
             padding: 25px 25px;
-            font-size: 16px;
+            font-size: 20px;
         }
 
         @include from($b-desktop) {
             padding: 35px 30px;
-            font-size: 18px;
+            font-size: 24px;
         }
 
         @include from($b-xl) {
             padding: 45px 40px;
-            font-size: 21px;
-        }
-
-        @include from($b-2xl) {
-            font-size: 22px;
+            font-size: 30px;
         }
     }
 
     &__title {
-        font-family: $ui-font-1;
+        font-family: $ui-font-3;
         font-weight: 700;
         font-size: 24px;
         line-height: 120%;
@@ -94,12 +90,16 @@
         }
 
         @include from($b-lg) {
-            font-size: 35px;
+            font-size: 36px;
         }
+    }
 
-        @include from($b-xl) {
-            font-size: 40px;
-        }
+    &__date {
+        font-family: $ui-font-1;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 125%;
+        color: rgba(#000, 0.5);
     }
 }
 
