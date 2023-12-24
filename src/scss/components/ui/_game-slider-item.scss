@@ -4,13 +4,27 @@
     gap: 16px;
 
     @include from($b-md) {
+        height: 535px !important;
         display: grid !important;
         grid-template-columns: 3fr minmax(0, 2fr);
         gap: 20px;
     }
 
     @include from($b-desktop) {
+        height: 415px !important;
         grid-template-columns: 2fr 1fr;
+    }
+
+    @include from($b-lg) {
+        height: 465px !important;
+    }
+
+    @include from($b-xl) {
+        height: 485px !important;
+    }
+
+    @include from($b-2xl) {
+        height: 520px !important;
     }
 
     &:not(.swiper-slide-active) {
