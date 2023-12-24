@@ -11,7 +11,8 @@
         @include from($b-md) {
             max-width: none;
             width: 100vw;
-            height: min(100vh, 100%);
+            height: 85vh;
+            max-height: 100%;
         }
     }
 
@@ -21,10 +22,6 @@
         object-fit: cover;
         object-position: center;
         z-index: -1;
-
-        @include from($b-md) {
-            filter: brightness(50%);
-        }
     }
 
     &__bg_sm {
@@ -49,14 +46,18 @@
         font-weight: 700;
         font-size: 14px;
         color: #FFFFFF;
+        line-height: 125%;
 
         @include from($b-md) {
             bottom: 220px;
             font-size: 24px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 15px 30px;
         }
 
         @include from($b-lg) {
             font-size: 36px;
+            padding: 20px 36px;
         }
 
         @include from($b-xl) {
