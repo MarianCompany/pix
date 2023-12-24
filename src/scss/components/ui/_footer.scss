@@ -143,7 +143,7 @@
         margin-top: 20px;
 
         font-family: $ui-font-3;
-        font-weight: 600;
+        font-weight: 400;
         font-size: 14px;
         color: rgba(255, 255, 255, 0.6);
         cursor: pointer;
@@ -238,11 +238,18 @@
         width: 150px;
         height: 40px;
         object-fit: contain;
-        object-position: center;
 
         @include from($b-lg) {
             width: 220px;
             height: 55px;
         }
+    }
+
+    &__logo-link:first-child &__logo {
+        object-position: left center;
+    }
+
+    &__logo-link:last-child &__logo {
+        object-position: right center;
     }
 }
