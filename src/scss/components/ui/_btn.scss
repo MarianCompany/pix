@@ -56,4 +56,8 @@
         min-width: 0;
         width: auto;
     }
+
+    &_brand-border {
+        border-color: $ui-c-brand;
+    }
 }

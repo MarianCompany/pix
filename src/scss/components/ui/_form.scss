@@ -19,16 +19,13 @@
     }
 
     &__header-title {
+        font-family: $ui-font-3;
         font-size: 24px;
         color: #FFFFFF;
 
         @include from($b-desktop) {
             max-width: 75%;
-            font-size: 35px;
-        }
-
-        @include from($b-xl) {
-            font-size: 40px;
+            font-size: 36px;
         }
     }
 
@@ -76,7 +73,7 @@
         padding: 0;
 
         font-family: $ui-font-1;
-        font-weight: 500;
+        font-weight: 600;
         font-size: 14px;
         color: #FFFFFF;
         line-height: 115%;
