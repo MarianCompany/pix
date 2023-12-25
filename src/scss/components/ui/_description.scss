@@ -5,6 +5,10 @@
 
     &__content:not(&__content:first-child) {
         margin-top: 10px;
+
+        @include from($b-md) {
+            margin-top: 25px;
+        }
     }
 
     &__block {
@@ -12,6 +16,12 @@
 
         &:first-child {
             margin-top: 0;
+        }
+    }
+
+    &__block_66_from-md {
+        @include from($b-md) {
+            max-width: 66%;
         }
     }
 }

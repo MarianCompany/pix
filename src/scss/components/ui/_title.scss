@@ -25,11 +25,11 @@
         font-size: 30px;
 
         @include from($b-desktop) {
-            font-size: 35px;
+            font-size: 32px;
         }
 
         @include from($b-xl) {
-            font-size: 40px;
+            font-size: 36px;
         }
     }
 
@@ -43,6 +43,10 @@
 
     &_font1 {
         font-family: $ui-font-1;
+    }
+
+    &_font3 {
+        font-family: $ui-font-3;
     }
 
     &_leading-0 {
