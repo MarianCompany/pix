@@ -3,6 +3,10 @@
 .game-list {
     position: relative;
 
+    @include to($b-md - 0.1) {
+        margin-left: -1px;
+    }
+
     &__wrapper {
         position: relative;
         margin-top: -100px;
