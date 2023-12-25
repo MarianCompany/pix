@@ -4,11 +4,21 @@
     align-items: flex-start;
     justify-content: flex-start;
     gap: 12px;
+    row-gap: 8px;
     padding-bottom: 30px;
     white-space: nowrap;
     overflow-x: scroll;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
+
+    &_wrapped {
+        padding-bottom: 0;
+        flex-wrap: wrap;
+        white-space: initial;
+        overflow-x: initial;
+        overflow-y: initial;
+        -webkit-overflow-scrolling: initial;
+    }
 
     &__el {
         display: flex;
