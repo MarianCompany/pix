@@ -42,19 +42,6 @@
     &__description-wrap .text {
         @include from($b-md) {
             font-size: 16px;
-            line-height: 120%;
-        }
-
-        @include from($b-desktop) {
-            font-size: 18px;
-        }
-
-        @include from($b-lg) {
-            font-size: 20px;
-        }
-
-        @include from($b-xl) {
-            font-size: 22px;
         }
     }
 

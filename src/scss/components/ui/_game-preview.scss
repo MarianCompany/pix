@@ -140,10 +140,10 @@
     }
 
     &__btn-list_frontiers &__btn:last-child {
-        grid-column: span 3 / span 3;
+        grid-column: span 2 / span 2;
     }
 
-    &__btn-list_frontiers &__btn:nth-last-child(2) {
+    &__btn-list_little-big-robots &__btn:nth-child(2) {
         grid-column: span 2 / span 2;
     }
 

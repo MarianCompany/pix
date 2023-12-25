@@ -114,11 +114,7 @@
         }
 
         @include from($b-xl) {
-            font-size: 26px;
-        }
-
-        @include from($b-2xl) {
-            font-size: 28px;
+            font-size: 24px;
         }
     }
 
@@ -181,5 +177,20 @@
     &__icon {
         width: 35px;
         height: 40px;
+
+        @include from($b-desktop) {
+            width: 45px;
+            height: 50px;
+        }
+
+        @include from($b-lg) {
+            width: 55px;
+            height: 60px;
+        }
+
+        @include from($b-desktop) {
+            width: 62px;
+            height: 70px;
+        }
     }
 }
