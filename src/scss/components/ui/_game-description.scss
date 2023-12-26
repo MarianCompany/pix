@@ -188,7 +188,7 @@
             height: 60px;
         }
 
-        @include from($b-desktop) {
+        @include from($b-xl) {
             width: 62px;
             height: 70px;
         }

@@ -40,11 +40,8 @@
             width: 100%;
             height: auto;
             aspect-ratio: 12 / 5;
+            overflow: hidden;
         }
-    }
-
-    &__slider-main .swiper-wrapper {
-        overflow: hidden;
     }
 
     &__slider-sm {
