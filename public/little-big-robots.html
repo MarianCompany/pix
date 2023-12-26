@@ -280,7 +280,7 @@
                         </div>
 
                         <div class="game-trailer__content">
-                            <a href="https://www.youtube.com/watch?v=1terSvbPgeQ" target="_blank" class="game-trailer__video-link">
+                            <a data-embed-id="1terSvbPgeQ" class="game-trailer__video-link">
                                 <img src="/pix/public/img/little-big-robots-trailer.jpg" alt="" class="game-trailer__poster">
                             </a>
                             <div class="game-trailer__description-wrap">
@@ -386,6 +386,14 @@
                     <img src="/pix/public/img/cross.svg" alt="" class="popup__close-icon">
                 </div>
                 <img src="" class="popup__img">
+            </div>
+        </div>
+        <div class="popup" id="popup-youtube">
+            <div class="popup__inner">
+                <div class="popup__close js-close-popup" data-target-popup="this">
+                    <img src="/pix/public/img/cross.svg" alt="" class="popup__close-icon">
+                </div>
+                <iframe class="popup__video" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </div>
     </div>

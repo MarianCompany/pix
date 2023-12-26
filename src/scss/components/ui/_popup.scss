@@ -83,11 +83,15 @@
         margin-top: 15px;
     }
 
-    &__img {
+    &__img, &__video {
         width: 100%;
         height: auto;
         aspect-ratio: 16 / 9;
         object-fit: cover;
         object-position: center;
+    }
+    
+    &__video {
+        background-color: #121212;
     }
 }

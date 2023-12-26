@@ -36,4 +36,9 @@ $(document).ready(function() {
         $(`#popup-img`).find('.popup__img').attr('src', $(this).attr('src'));
         Popup.show('#popup-img');
     });
+
+    $('.game-trailer__video-link').on('click', function() {
+        $('#popup-youtube').find('.popup__video').attr('src', `https://youtube.com/embed/${$(this).attr('data-embed-id')}`);
+        Popup.show('#popup-youtube');
+    });
 });

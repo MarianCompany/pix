@@ -288,9 +288,9 @@
                         </div>
 
                         <div class="game-trailer__content">
-                            <a href="https://www.youtube.com/watch?v=66ra_r9lbuU" target="_blank" class="game-trailer__video-link">
+                            <div data-embed-id="66ra_r9lbuU" class="game-trailer__video-link">
                                 <img src="/public/img/frontiers-trailer.jpg" alt="" class="game-trailer__poster">
-                            </a>
+                            </div>
                             <div class="game-trailer__description-wrap">
                                 <div class="description">
                                     <div class="description__block">
@@ -395,6 +395,14 @@
                     <img src="/public/img/cross.svg" alt="" class="popup__close-icon">
                 </div>
                 <img src="" class="popup__img">
+            </div>
+        </div>
+        <div class="popup" id="popup-youtube">
+            <div class="popup__inner">
+                <div class="popup__close js-close-popup" data-target-popup="this">
+                    <img src="/public/img/cross.svg" alt="" class="popup__close-icon">
+                </div>
+                <iframe class="popup__video" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </div>
     </div>
