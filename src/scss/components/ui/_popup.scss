@@ -1,0 +1,93 @@
+.popup {
+    display: none;
+
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: rgba(#000000, 0.6);
+    overflow: scroll;
+    z-index: 12;
+
+    &_active {
+        display: flex;
+        animation: show $ui-transition-time-2;
+    }
+
+    @keyframes show {
+        from {
+            filter: brightness(15%);
+        }
+
+        to {
+            filter: none;
+        }
+    }
+
+    &__inner {
+        position: relative;
+        width: 100vw;
+        margin: auto;
+        padding: 15px;
+
+        @include from($b-sm) {
+            padding: 20px;
+        }
+
+        @include from($b-tablet) {
+            width: 768px;
+        }
+
+        @include from($b-desktop) {
+            width: 1024px;
+            padding: 25px;
+        }
+
+        @include from($b-xl) {
+            width: 1366px;
+        }
+    }
+
+    &__close {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        right: 15px;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transform: translateY(-100%);
+        background-color: rgba(#FFFFFF, 0.3);
+
+        cursor: pointer;
+
+        @include from($b-sm) {
+            right: 20px;
+        }
+
+        @include from($b-desktop) {
+            right: 25px;
+        }
+    }
+
+    &__close-icon {
+        width: 50%;
+        height: 50%;
+    }
+
+    &__content {
+        margin-top: 15px;
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        object-position: center;
+    }
+}

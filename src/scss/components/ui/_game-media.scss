@@ -40,8 +40,11 @@
             width: 100%;
             height: auto;
             aspect-ratio: 12 / 5;
-            overflow: hidden;
         }
+    }
+
+    &__slider-main .swiper-wrapper {
+        overflow: hidden;
     }
 
     &__slider-sm {
@@ -92,6 +95,7 @@
         height: 100%;
         object-fit: cover;
         object-position: center;
+        cursor: pointer;
     }
 
     &__slider-sm-img {
@@ -99,6 +103,7 @@
         height: 100%;
         object-fit: cover;
         object-position: center;
+        cursor: pointer;
     }
 
     &__btn {
