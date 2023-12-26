@@ -4,7 +4,7 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 
 $(document).ready(function () {
-    const mainSlider = new Swiper('.game-media__slider-main', {
+    const mainSliderToMd = new Swiper('.game-media__slider-main_to-md', {
         modules: [EffectFade, Navigation],
         effect: 'fade',
         crossFade: true,
@@ -33,11 +33,24 @@ $(document).ready(function () {
         }
     });
 
-    mainSlider.on('slideNextTransitionStart', function (s) {
+    const mainSliderFromMd = new Swiper('.game-media__slider-main_from-md', {
+        modules: [Navigation],
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        loop: true,
+
+        navigation: {
+            disabledClass: 'game-slider__btn_disabled',
+            prevEl: `.game-media__btn_prev`,
+            nextEl: `.game-media__btn_next`,
+        },
+    });
+
+    mainSliderToMd.on('slideNextTransitionStart', function (s) {
         smSlider.slideNext();
     })
 
-    mainSlider.on('slidePrevTransitionStart', function (s) {
+    mainSliderToMd.on('slidePrevTransitionStart', function (s) {
         smSlider.slidePrev();
     })
 });
